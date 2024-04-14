@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./taxbg.jpeg');
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 50px;
+    border: 1px solid indianred;
+    border-radius: 10px;
+
+}
+h1{
+    color: white;
+    margin-top: -10px;
+    text-align: center;
+}
+.fa-circle-exclamation{
+    width: 25px;
+    height: 25px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+}
+.form-group-one {
+    margin-top: 20px;
+}
+.form-group-two {
+    margin-top: 20px;
+}
+.form-group-three {
+    margin-top: 20px;
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+#age{
+    width: 396px;
+    height: 41px;
+    color: ghostwhite;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+select {
+    width: 370px;
+    height: 35px;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 0 0 24px;
+    background: rgba(255,255,255,0.1);
+
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 395px;
+    margin-top: 30px;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 2px solid darkred;
+    padding: 2px 5px;
+    font-size: 12px;
+    color: red;
+    cursor: pointer;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background: whitesmoke;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 60%;
+    
+    
+}
+.modal-content h2{
+    margin-left: 300px;
+}
+.modal-content h4{
+    margin-left: 365px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-button{
+    border: 2px solid #1d52a6;
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    margin-left: 340px;
+    color: white;
+    background-color: #1d52a6;
+    margin-bottom: 30px;
+}
+#result{
+    color: #1d52a6;
+    font-size: 24px;
+    font-weight: 400px;
+    margin-left: 380px;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.tooltipnew{
+  position: relative;
+  border: 2px solid #7b1113;
+  
+  width: 12px;
+  height: 8px;
+  padding: 2px 5px;
+  margin: 15px;
+  font-size: 10px;
+  font-weight: bolder;
+  border-radius: 50%;
+  color: #7b1113;
+  margin-left: 7px;
+}
+.tooltipnew:before,
+.tooltipnew:after{
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.tooltipnew:before{
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #ff3436 transparent transparent transparent;
+  top:-18;
+  transform: translateY(20px);
+  margin-bottom: 5px;
+}
+.tooltipnew:after{
+  content: attr(data-tooltip);
+  background: #ff3466;
+  color: white;
+  width: 260px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: 300;
+  top: -48px;
+  left: -10px;
+  padding: 6px 9px 10px 9px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transform: translateY(10px);
+  margin-bottom: 5px;
+}
+.tooltipnew:hover::before,
+.tooltipnew:hover::after{
+  opacity: 1;
+  transform: translateY(-2px);
+}
+@keyframes shake{
+  0%{
+    transform: rotate(2deg);
+  }
+  50%{
+    transform: rotate(-3deg);
+  }
+  70%{
+    transform: rotate(3deg);
+  }
+  0%{
+    transform: rotate(0deg);
+  }
+}
+.animation{
+    height: 15px;
+    width: 10px;
+}
+#animation:hover{
+  animation: shake 500ms ease-in-out forwards;
+}
+
+.error-icon {
+    display: none;
+    position: absolute;
+    border: 1px solid red;
+    height: 12px;
+    width: 14px;
+    padding: 2px 2px 6px 2px;
+    text-align: center;
+    border-radius: 50%;
+    right: 580px;
+    top: 26.4%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #f00;
+    cursor: help;
+}
+.error-icon-one{
+    display: none;
+    position: absolute;
+    border: 1px solid red;
+    height: 12px;
+    width: 14px;
+    padding: 2px 2px 6px 2px;
+    text-align: center;
+    border-radius: 50%;
+    right: 580px;
+    top: 38%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #f00;
+    cursor: help;
+}
+.error-icon-two{
+    display: none;
+    position: absolute;
+    border: 1px solid red;
+    height: 12px;
+    width: 14px;
+    padding: 2px 2px 6px 2px;
+    text-align: center;
+    border-radius: 50%;
+    right: 580px;
+    top: 61.3%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #f00;
+    cursor: help;
+}
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: calc(33% + -30px);
+    left: calc(60% + 10px); /* Adjust the positioning */
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.error-icon:hover + .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.tooltiptwo {
+    visibility: hidden;
+    position: absolute;
+    top: calc(38% + -30px);
+    left: calc(65% + -25px); /* Adjust the positioning */
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.error-icon-one:hover + .tooltiptwo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltipthree {
+    visibility: hidden;
+    position: absolute;
+    top: calc(65% + -30px);
+    left: calc(65% + -25px); /* Adjust the positioning */
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.error-icon-two:hover + .tooltipthree {
+    visibility: visible;
+    opacity: 1;
+}

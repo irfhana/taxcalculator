@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="tax.css">
+        <script src="https://kit.fontawesome.com/26fc943e60.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <form id="taxForm">
+
+            <div class="form-group">
+                <div class="row">
+                    <label for="grossIncome">Enter gross annual income (₹) </label>
+                    <div id="animation">
+                        <span class="tooltipnew" data-tooltip="Enter Total amount of money earned by an individual or a business before any deductions or taxes.">?</span>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text" id="grossIncome" placeholder="Enter gross annual income" required>
+                    <span class="error-icon" id="errorIcon">!</span>
+                <div class="tooltip" id="tooltip">Only numeric numbers are allowed</div>
+            </div>
+                
+               
+           
+            <div class="form-group-one">
+                <div class="row">
+                    <label for="extraIncome">Enter extra income (₹)</label>
+                    <div id="animation">
+                        <span class="tooltipnew" data-tooltip="Enter additional money earnings that are separate from one's regular income or salary.">?</span>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="extraIncome" placeholder="Enter extra income from othe sources">
+                    <span class="error-icon-one" id="errorIconOne">!</span>
+                <div class="tooltiptwo" id="tooltipTwo">Only numeric numbers are allowed</div>
+                
+                
+            </div>
+
+
+            
+            <div class="form-group-two">
+                <div class="row">
+                    <label for="age">Enter age Group</label>
+                     <div id="animation">
+                        <span class="tooltipnew" data-tooltip="Enter your age accoring to your birth year if you are between 40 to 60 choose second option">?</span>
+                    </div>
+                </div>
+                
+                <select id="age" required>
+                    <option value="0" style="color: black;">&lt;0</option>
+                    <option value="<40" style="color: black;">&lt;40</option>
+                    <option value="≥40 & <60" style="color: black;">&ge;40 &lt;60</option>
+                    <option value="≥60" style="color: black;">&ge;60</option>
+                </select>
+                
+            </div>
+
+            <div class="form-group-three">
+                <div class="row">
+                    <label for="deductions">Enter Total Applicable Deductions (₹)</label>
+                     <div id="animation">
+                        <span class="tooltipnew" data-tooltip="Total applicable deductions refer to the sum of all deductions that can be claimed by an individual to reduce their taxable income.">?</span>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="deductions" placeholder="Add total applicable deductions">
+                    <span class="error-icon-two" id="errorIconTwo">!</span>
+                <div class="tooltipthree" id="tooltipThree">Only numeric numbers are allowed</div>
+                
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+
+        <div class="modal" id="resultModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Your Overall income will be</h2>
+                
+                <div id="result"></div>
+                <h4>after tax deductions</h4>
+                <button class="btn close-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tax.js"></script>
+</body>
+</html>
